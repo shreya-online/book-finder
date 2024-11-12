@@ -18,7 +18,6 @@ const Footer = () => {
     >
       <Container maxWidth="lg">
         <Grid container spacing={4} justifyContent="space-between">
-          {/* About Section */}
           <Grid item xs={12} md={4}>
             <Typography variant="h6" gutterBottom>
               About BookFinder
@@ -28,7 +27,6 @@ const Footer = () => {
             </Typography>
           </Grid>
 
-          {/* Links Section */}
           <Grid item xs={12} md={4}>
             <Typography variant="h6" gutterBottom>
               Quick Links
@@ -52,7 +50,6 @@ const Footer = () => {
             </ul>
           </Grid>
 
-          {/* Social Media Section */}
           <Grid item xs={12} md={4}>
             <Typography variant="h6" gutterBottom>
               Follow Us
@@ -74,7 +71,6 @@ const Footer = () => {
           </Grid>
         </Grid>
 
-        {/* Copyright Section */}
         <Box sx={{ textAlign: "center", marginTop: 4 }}>
           <Typography variant="body2" color="grey">
             &copy; {new Date().getFullYear()} BookFinder. All Rights Reserved.

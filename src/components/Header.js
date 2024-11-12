@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import Logo from '../assets/logo.png'; // Your logo image
+import Logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 
 const pages = [
@@ -30,53 +30,47 @@ const Header = () => {
 
   return (
     <AppBar position="sticky" sx={{
-      background: 'linear-gradient(135deg, #008080, #003B2D)',  // Teal to Dark Green Gradient
-      boxShadow: 4,  // Subtle shadow for depth
-      zIndex: 1100,  // Ensure it's always on top
-      transition: 'background 0.5s ease',  // Smooth transition for background color change on scroll
+      background: 'linear-gradient(135deg, #008080, #003B2D)',
+      boxShadow: 4,
+      zIndex: 1100,
+      transition: 'background 0.5s ease',
     }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* Logo */}
-          <img
-            src={Logo}
-            alt="logo"
+          <img src={Logo} alt="logo"
             style={{
               width: "80px",
               height: "80px",
               marginRight: '15px',
-              borderRadius: '5px', // Slightly rounded corners for a polished look
-              transition: 'transform 0.3s ease',  // Smooth transition effect on hover
+              borderRadius: '5px', 
+              transition: 'transform 0.3s ease',
             }}
           />
 
-          {/* Title */}
-          <Link
-            to="/"
+          <Link to="/"
             style={{
               display: 'flex', 
               alignItems: 'center',
-              fontFamily: "Poppins, sans-serif",  // Modern font for better design
-              fontWeight: 800,  // Bold font weight for a strong title
-              letterSpacing: ".5rem",  // Increased letter spacing for better readability
-              color: "white",  // White text for contrast
-              textDecoration: "none",  // Remove underline by default
-              fontSize: '2rem',  // Larger font size for better visibility
-              transition: 'color 0.3s ease',  // Smooth color transition on hover
-              padding: '10px',  // Padding for better click area
-              borderRadius: '8px',  // Rounded corners for a more modern feel
+              fontFamily: "Poppins, sans-serif",
+              fontWeight: 800,
+              letterSpacing: ".5rem",
+              color: "white",
+              textDecoration: "none",
+              fontSize: '2rem',
+              transition: 'color 0.3s ease',
+              padding: '10px',
+              borderRadius: '8px',
               '&:hover': {
-                color: '#4FD1C5',  // Light Teal color when hovered
-                textDecoration: 'none',  // Prevent underline on hover
-                transform: 'scale(1.1)',  // Slight scale effect to give the hover a more dynamic feel
-                boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',  // Shadow on hover for depth
+                color: '#4FD1C5',
+                textDecoration: 'none',
+                transform: 'scale(1.1)',
+                boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',
               }
             }}
           >
             BookFinder
           </Link>
 
-          {/* Mobile Menu Icon */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -114,10 +108,9 @@ const Header = () => {
             </Menu>
           </Box>
 
-          {/* Desktop Menu */}
           <Box sx={{
             flexGrow: 1, display: { xs: "none", md: "flex" },
-            justifyContent: "flex-end",  // Align buttons to the right
+            justifyContent: "flex-end",
           }}>
             {pages.map((page, index) => (
               <Button
@@ -125,15 +118,15 @@ const Header = () => {
                 onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
-                  color: "white",  // White text for button
+                  color: "white",
                   display: "block",
                   fontWeight: 500,
-                  textTransform: "none",  // Keep the text normal case for buttons
-                  padding: '8px 16px', // Better padding for buttons
+                  textTransform: "none",
+                  padding: '8px 16px',
                   '&:hover': {
-                    backgroundColor: '#4FD1C5',  // Light Teal on hover
-                    transform: 'translateY(-2px)',  // Slight lift effect on hover
-                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',  // Shadow on hover for depth
+                    backgroundColor: '#4FD1C5',
+                    transform: 'translateY(-2px)', 
+                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
                   }
                 }}
               >

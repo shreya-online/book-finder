@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Outlet />  {/* Child route components will be rendered here */}
+      <Outlet />
       <Footer />
     </div>
   );
